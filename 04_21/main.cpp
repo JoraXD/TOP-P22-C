@@ -56,8 +56,11 @@ void copy_file(const std::string &filename){
 
 }
 void in_out(std::istream &in,std::ostream &out){
-
-    //in>>out;
+while (not in.eof()) {
+        std::string line;
+        std::getline(in, line);
+        out<< line << "\n";
+    }
 }
 void in_from_cons(const std::string &filename){
     std::string ln;
